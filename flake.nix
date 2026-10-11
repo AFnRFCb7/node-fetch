@@ -102,7 +102,19 @@
                             in
                                 {
                                     implementation = implementation ;
-                                    check = null ;
+                                    check =
+                                        {
+                                            obviated-by ,
+                                            nixosTest
+                                        } :
+                                            {
+                                                obviated-by = obviated-by ;
+                                                test =
+                                                    nixosTest
+                                                        {
+
+                                                        } ;
+                                            } ;
                                 } ;
             } ;
 }
