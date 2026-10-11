@@ -11,7 +11,7 @@
                     } :
                         let
                             implementation =
-                                { pkgs , ... } :
+                                { config , lib , pkgs , ... } :
                                     let
                                         _config = config-identity config ;
                                         _lib = lib-identity lib ;
